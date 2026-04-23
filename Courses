@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Catalog - Fabric, Azure SA, AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: #f5f5f7;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+    h2 {
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.25rem;
+      margin-top: 1.5rem;
+    }
+    h3 {
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .course-meta {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.25rem;
+    }
+    ul {
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    li {
+      margin-bottom: 0.15rem;
+    }
+    footer {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Master-Style Study Program – Course Catalog</h1>
+    <nav>
+      <a href="sem1-plan.html">Semester 1</a>
+      <a href="sem2-6-plan.html">Semesters 2–6</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>
+      This catalog lists all courses in the two-year plan across Microsoft Fabric, coding, Azure Solutions Architect, and Azure AI tracks.
+      Each course includes goals, key skills, and suggested resources so you can align them with certifications (DP-600, DP-700, AZ-104, AZ-305, AI-102).
+    </p>
+
+    <!-- Fabric Track -->
+    <h2>Fabric Track</h2>
+
+    <h3>FAB-101 – Fabric Fundamentals &amp; OneLake Concepts (3 cr)</h3>
+    <div class="course-meta">Level: Intro &middot; Focus: Fabric architecture, workloads, medallion concepts</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Build a mental model of Microsoft Fabric, key workloads, and medallion architecture.</li>
+      <li>Navigate workspaces and OneLake confidently.</li>
+    </ul>
+    <strong>Key skills</strong>
+    <ul>
+      <li>Fabric architecture: capacities, workspaces, items, OneLake; link to Power BI and Synapse.</li>
+      <li>Workload overview: Data Engineering, Data Factory, Data Warehouse, Real-Time Analytics, Data Science, Power BI.</li>
+      <li>Medallion concepts (bronze/silver/gold) and when to choose lakehouse vs warehouse.</li>
+    </ul>
+    <strong>Resources</strong>
+    <ul>
+      <li>Microsoft Learn Fabric overview and DP-600 learning paths.</li>
+      <li>DP-600T00-A course syllabus as a topic map.</li>
+    </ul>
+
+    <h3>FAB-120 – Lakehouse, Spark, and Delta in Fabric (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: PySpark, Delta, lakehouse patterns</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Build lakehouses using PySpark and Delta aligned with DP-700 expectations.</li>
+    </ul>
+    <strong>Key skills</strong>
+    <ul>
+      <li>Lakehouse creation and table design with partitions.</li>
+      <li>PySpark DataFrames, joins, aggregations, window functions.</li>
+      <li>Delta tables and basic structured streaming.</li>
+    </ul>
+
+    <h3>FAB-140 – Dataflows Gen2 &amp; Pipelines (2 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: SaaS-style ingestion and orchestration</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Use Dataflows Gen2 and Pipelines to ingest and orchestrate data in Fabric.</li>
+    </ul>
+
+    <h3>FAB-160 – Warehouse &amp; Semantic Modeling (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: star schemas, warehouse, semantic models, DAX</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Design a warehouse and semantic model that supports analytics workloads efficiently.</li>
+    </ul>
+
+    <h3>FAB-220 – Governance, Security &amp; DevOps in Fabric (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: security, governance, CI/CD</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Operate Fabric as a governed, production platform with multiple environments.</li>
+    </ul>
+
+    <h3>FAB-240 – Healthcare Data Engineering on Fabric (4 cr)</h3>
+    <div class="course-meta">Level: Advanced Project &middot; Focus: HL7/FHIR, PHI, healthcare analytics</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Apply Fabric to healthcare data feeds and PHI-aware pipelines.</li>
+    </ul>
+
+    <h3>FAB-390 – DP-600 &amp; DP-700 Exam Workshop (2 cr)</h3>
+    <div class="course-meta">Level: Exam &middot; Focus: exam prep and gap-closing</div>
+    <strong>Goals</strong>
+    <ul>
+      <li>Close gaps and get exam-ready for Fabric Analytics Engineer and Fabric Data Engineer certifications.</li>
+    </ul>
+
+    <!-- Coding Track -->
+    <h2>Coding &amp; Querying Track</h2>
+
+    <h3>CODE-100 – Python for Data &amp; AI Foundations (2 cr)</h3>
+    <div class="course-meta">Level: Intro &middot; Focus: Python basics and pandas</div>
+
+    <h3>CODE-120 – PySpark for Fabric Data Engineering (2 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: PySpark transformations and streaming</div>
+
+    <h3>CODE-140 – KQL for Real-Time Analytics (2 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: KQL querying and dashboards</div>
+
+    <h3>CODE-160 – DAX for Semantic Models (2 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: DAX patterns and performance</div>
+
+    <!-- Azure SA Track -->
+    <h2>Azure Solutions Architect Track</h2>
+
+    <h3>AZ-FND-100 – Azure Fundamentals for Architects (2 cr)</h3>
+    <div class="course-meta">Level: Intro &middot; Focus: core Azure concepts and resource hierarchy</div>
+
+    <h3>AZ-ADM-104 – Azure Administration Deep Dive (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: AZ-104-level administration</div>
+
+    <h3>AZ-ARCH-200 – Architecting Identity, Governance, Monitoring (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: identity and governance design</div>
+
+    <h3>AZ-ARCH-220 – Data Storage &amp; Hybrid Connectivity Design (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: storage choices and hybrid networking</div>
+
+    <h3>AZ-ARCH-240 – Resilience, BCDR &amp; Cost Optimization (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: HA/DR and cost control</div>
+
+    <h3>AZ-HC-260 – Healthcare Cloud Architectures on Azure (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: healthcare-specific cloud designs</div>
+
+    <h3>AZ-ARCH-300 – AZ-104 &amp; AZ-305 Exam Bootcamp (2 cr)</h3>
+    <div class="course-meta">Level: Exam &middot; Focus: Azure Solutions Architect Expert prep</div>
+
+    <!-- AI Track -->
+    <h2>AI &amp; Agentic Track</h2>
+
+    <h3>AI-FND-100 – AI &amp; ML Fundamentals (2 cr)</h3>
+    <div class="course-meta">Level: Intro &middot; Focus: ML concepts and metrics</div>
+
+    <h3>AI-AZ-120 – Azure AI Services Fundamentals (2 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: Azure AI services capabilities</div>
+
+    <h3>AI-GEN-140 – Generative AI &amp; LLM Basics (3 cr)</h3>
+    <div class="course-meta">Level: Core &middot; Focus: LLMs, prompting, embeddings, RAG</div>
+
+    <h3>AI-AZ-160 – Azure AI Search &amp; RAG Applications (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: Azure AI Search and RAG implementations</div>
+
+    <h3>AI-AGT-200 – Agentic AI Patterns on Azure (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: tool-using agents and orchestration</div>
+
+    <h3>AI-HC-220 – Healthcare AI Use Cases &amp; Compliance (3 cr)</h3>
+    <div class="course-meta">Level: Advanced &middot; Focus: responsible AI in healthcare</div>
+
+    <h3>AI-CERT-300 – AI-102 Exam Bootcamp (2 cr)</h3>
+    <div class="course-meta">Level: Exam &middot; Focus: Azure AI Engineer (AI-102) prep</div>
+
+    <!-- Capstone -->
+    <h2>Capstone</h2>
+
+    <h3>Capstone-INT-400 – Integrated Healthcare Data + AI Architecture (4 cr)</h3>
+    <div class="course-meta">Level: Capstone &middot; Focus: end-to-end architecture and integration</div>
+
+  </main>
+
+  <footer>
+    <p>
+      This catalog is aligned with Microsoft certification paths (DP-600, DP-700, AZ-104, AZ-305, AI-102), Microsoft Learn content,
+      and learn.cantrill.io Azure courses. It is intended as the backbone of a two-year master-style self-study program.[web:14][web:20][web:30][web:39][web:42][web:21][web:24][web:45][web:52][web:62][web:61][web:63][web:68][web:16][web:19][web:22][web:25][web:28]
+    </p>
+  </footer>
+</body>
+</html>

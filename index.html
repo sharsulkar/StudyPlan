@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Semester 1 Study Plan - Fabric, Python, KQL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      line-height: 1.5;
+      background: #f5f5f7;
+      color: #111827;
+    }
+    header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+    h2 {
+      color: #111827;
+      margin-top: 0.25rem;
+    }
+    p.lead {
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      color: #4b5563;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+      background: #ffffff;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.08);
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.5rem 0.75rem;
+      vertical-align: top;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f3f4f6;
+      text-align: left;
+      font-weight: 600;
+    }
+    tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+    .week {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    footer {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+    @media (max-width: 800px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      tr {
+        margin-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+      th, td {
+        border-left: none;
+        border-right: none;
+      }
+      .week {
+        margin-top: 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Master-Style Study Plan</h1>
+    <nav>
+      <a href="sem1-plan.html">Semester 1</a>
+      <a href="sem2-6-plan.html">Semesters 2–6</a>
+      <a href="https://learn.microsoft.com/en-us/credentials/certifications/dp-600/" target="_blank" rel="noopener">
+        DP-600
+      </a>
+      <a href="https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/" target="_blank" rel="noopener">
+        DP-700
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Semester 1: Fabric, Python, KQL</h2>
+    <p class="lead">
+      14-week plan (~10–12 hours/week) focusing on Microsoft Fabric fundamentals, lakehouse engineering with PySpark,
+      Python for data work, and KQL for Real-Time Analytics. This semester lays the foundation for DP-600 and DP-700.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Main Theme</th>
+          <th>Fabric Tasks</th>
+          <th>Coding / KQL Tasks</th>
+          <th>Optional AI Tasks</th>
+          <th>Est. Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="week">1</td>
+          <td>Ramp-up & setup</td>
+          <td>
+            - Set up Fabric workspace and explore workloads<br />
+            - Work through high-level Fabric overview modules
+          </td>
+          <td>
+            - Refresh Python basics (syntax, control flow, functions)<br />
+            - Set up Jupyter / notebooks environment
+          </td>
+          <td>
+            - Skim a short ML overview (types of ML, basic terminology)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">2</td>
+          <td>Workspaces & OneLake</td>
+          <td>
+            - Deepen understanding of workspaces, capacities, items<br />
+            - Create sample lakehouse, warehouse, and semantic model
+          </td>
+          <td>
+            - Start pandas: DataFrames, reading CSVs, simple aggregations
+          </td>
+          <td>
+            - Buffer week (no AI required)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">3</td>
+          <td>Medallion basics</td>
+          <td>
+            - Study medallion architecture (bronze/silver/gold)<br />
+            - Implement simple medallion layout in a lakehouse using a small public CSV
+          </td>
+          <td>
+            - Continue pandas: joins, groupby, simple charts
+          </td>
+          <td>
+            - Map chosen dataset to possible ML tasks (classification/regression)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">4</td>
+          <td>Lakehouse creation</td>
+          <td>
+            - Create dedicated lakehouse for main public dataset<br />
+            - Ingest raw data into bronze tables
+          </td>
+          <td>
+            - Build an EDA notebook in Python for the chosen dataset (outside Fabric if easier)
+          </td>
+          <td>
+            - Note data quality issues with an eye toward ML later
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">5</td>
+          <td>PySpark & Delta basics</td>
+          <td>
+            - Use Fabric notebooks to read bronze data with PySpark<br />
+            - Clean and transform data; write to Delta silver tables
+          </td>
+          <td>
+            - Start KQL fundamentals: filtering, summarizing, projecting in a small KQL database
+          </td>
+          <td>
+            - Review how logs/time-series data differ from batch tabular data
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">6</td>
+          <td>Transformations & gold layer</td>
+          <td>
+            - Implement richer PySpark transformations (joins, windows)<br />
+            - Build gold tables (e.g., daily or user-level aggregates)
+          </td>
+          <td>
+            - Extend KQL with time-series queries and simple monitoring-style queries
+          </td>
+          <td>
+            - Read about evaluation metrics (accuracy, precision/recall) and how they’d apply to your data
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">7</td>
+          <td>Streaming concepts</td>
+          <td>
+            - Learn structured streaming basics in Fabric<br />
+            - Implement a simulated streaming pipeline (micro-batch from folder or event source)
+          </td>
+          <td>
+            - Build KQL queries and simple dashboards for a log or event dataset
+          </td>
+          <td>
+            - Mid-term self-assessment: identify weak areas
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">8</td>
+          <td>Mini-project 1</td>
+          <td>
+            - Build an end-to-end medallion pipeline for main public dataset<br />
+            - Bronze → Silver → Gold in Fabric
+          </td>
+          <td>
+            - Wire a simple semantic/reporting layer or queries against gold tables
+          </td>
+          <td>
+            - Document the project (architecture, tables, transformations)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">9</td>
+          <td>DP-600/700 alignment</td>
+          <td>
+            - Read DP-600 and DP-700 study guides; map current skills to exam objectives<br />
+            - Identify gaps in Fabric workloads or patterns
+          </td>
+          <td>
+            - Deepen Python data work: more complex analysis and visualizations
+          </td>
+          <td>
+            - Prototype a tiny ML model in a notebook (optional)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">10</td>
+          <td>Fill Fabric gaps</td>
+          <td>
+            - Implement 1–2 missing patterns (e.g., Dataflows Gen2 ingestion, alternative sources)<br />
+            - Improve performance/structure in existing pipelines
+          </td>
+          <td>
+            - Extend KQL work: create a small set of reusable operational queries
+          </td>
+          <td>
+            - Refine the ML notebook from Week 9 (optional)
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">11</td>
+          <td>Mini-project 2 (real-time)</td>
+          <td>
+            - Build small real-time analytics scenario in Fabric Real-Time Intelligence<br />
+            - Ingest simulated events into a KQL database
+          </td>
+          <td>
+            - Author KQL-based dashboards showing key metrics and trends
+          </td>
+          <td>
+            - Reflect on batch vs real-time trade-offs for interviews
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">12</td>
+          <td>Polish & documentation</td>
+          <td>
+            - Refactor notebooks and pipelines for both mini-projects<br />
+            - Improve naming, configuration, and folder structures
+          </td>
+          <td>
+            - Ensure KQL queries and Python notebooks are clean and well-commented
+          </td>
+          <td>
+            - Write 2–3 STAR-style interview stories based on your projects
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">13</td>
+          <td>Capstone assembly</td>
+          <td>
+            - Consolidate all work into a single Fabric workspace and GitHub repo<br />
+            - Create architecture diagram and README
+          </td>
+          <td>
+            - Verify that all code runs cleanly end-to-end
+          </td>
+          <td>
+            - Light DP-600/700 preview; note objectives to cover next semester
+          </td>
+          <td>10–12</td>
+        </tr>
+        <tr>
+          <td class="week">14</td>
+          <td>Retrospective & buffer</td>
+          <td>
+            - Write a short retrospective on what you learned and what to change in Semester 2
+          </td>
+          <td>
+            - Catch up on any incomplete modules or labs
+          </td>
+          <td>
+            - Identify one Kaggle competition or Azure/Fabric/AI hackathon to target next semester
+          </td>
+          <td>10–12</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>
+      Plan aligned with Microsoft Fabric DP-600 / DP-700 exam guides and Microsoft Learn content for Fabric, Python, and KQL.[web:14][web:20][web:65][web:42][web:61][web:62][web:68]
+    </p>
+  </footer>
+</body>
+</html>

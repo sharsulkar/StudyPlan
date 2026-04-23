@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Semester 1 Study Plan - Fabric, Python, KQL</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 2rem; line-height: 1.5; }
+    h1, h2 { color: #1f2933; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #d0d7de; padding: 0.5rem 0.75rem; vertical-align: top; }
+    th { background: #f3f4f6; text-align: left; }
+    tr:nth-child(even) td { background: #fafbfc; }
+    .week { white-space: nowrap; }
+    @media (max-width: 800px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      th { position: sticky; top: 0; }
+      .week { font-weight: 600; margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Semester 1 Study Plan (Fabric, Python, KQL)</h1>
+  <p>
+    This 14-week plan assumes roughly 10–12 hours per week, focusing on Microsoft Fabric fundamentals,
+    lakehouse engineering with PySpark, Python for data work, and KQL for Real-Time Analytics.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Main Theme</th>
+        <th>Fabric Tasks</th>
+        <th>Coding / KQL Tasks</th>
+        <th>Optional AI Tasks</th>
+        <th>Est. Hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="week">1</td>
+        <td>Ramp-up & setup</td>
+        <td>
+          - Set up Fabric workspace and explore workloads<br />
+          - Work through high-level Fabric overview modules
+        </td>
+        <td>
+          - Refresh Python basics (syntax, control flow, functions)<br />
+          - Set up Jupyter / notebooks environment
+        </td>
+        <td>
+          - Skim a short ML overview (types of ML, basic terminology)
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">2</td>
+        <td>Workspaces & OneLake</td>
+        <td>
+          - Deepen understanding of workspaces, capacities, items<br />
+          - Create sample lakehouse, warehouse, and semantic model
+        </td>
+        <td>
+          - Start pandas: DataFrames, reading CSVs, simple aggregations
+        </td>
+        <td>
+          - No AI required (buffer week)
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">3</td>
+        <td>Medallion basics</td>
+        <td>
+          - Study medallion architecture (bronze/silver/gold)<br />
+          - Implement a simple medallion layout in a lakehouse using a small public CSV
+        </td>
+        <td>
+          - Continue pandas: joins, groupby, simple charts
+        </td>
+        <td>
+          - Map chosen dataset to possible ML tasks (classification/regression)
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">4</td>
+        <td>Lakehouse creation</td>
+        <td>
+          - Create a dedicated lakehouse for your main public dataset<br />
+          - Ingest raw data into bronze tables
+        </td>
+        <td>
+          - Build an EDA notebook in Python for the chosen dataset (outside Fabric if easier)
+        </td>
+        <td>
+          - Optional: note data quality issues with an eye toward ML later
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">5</td>
+        <td>PySpark & Delta basics</td>
+        <td>
+          - Use Fabric notebooks to read bronze data with PySpark<br />
+          - Clean and transform data; write to Delta silver tables
+        </td>
+        <td>
+          - Start KQL fundamentals: filtering, summarizing, projecting in a small KQL database
+        </td>
+        <td>
+          - Optional: review how logs/time-series data differ from batch tabular data
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">6</td>
+        <td>Transformations & gold layer</td>
+        <td>
+          - Implement richer PySpark transformations (joins, windows)<br />
+          - Build gold tables (e.g., daily or user-level aggregates)
+        </td>
+        <td>
+          - Extend KQL with time-series queries and simple monitoring-style queries
+        </td>
+        <td>
+          - Optional: read about evaluation metrics (accuracy, precision/recall)
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">7</td>
+        <td>Streaming concepts</td>
+        <td>
+          - Learn structured streaming basics in Fabric<br />
+          - Implement a simulated streaming pipeline (micro-batch from folder or event source)
+        </td>
+        <td>
+          - Build KQL queries and simple dashboards for a log or event dataset
+        </td>
+        <td>
+          - Mid-term self-assessment: identify weak areas
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">8</td>
+        <td>Mini-project 1</td>
+        <td>
+          - Build an end-to-end medallion pipeline for the main public dataset<br />
+          - Bronze &rarr; Silver &rarr; Gold in Fabric
+        </td>
+        <td>
+          - Wire a simple semantic/reporting layer or queries against gold tables
+        </td>
+        <td>
+          - Document the project (architecture, tables, transformations)
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">9</td>
+        <td>DP-600/700 alignment</td>
+        <td>
+          - Read DP-600 and DP-700 study guides; map your current skills to exam objectives<br />
+          - Identify gaps in Fabric workloads or patterns
+        </td>
+        <td>
+          - Deepen Python data work: more complex analysis and visualizations
+        </td>
+        <td>
+          - Optional: prototype a tiny ML model in a notebook
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">10</td>
+        <td>Fill Fabric gaps</td>
+        <td>
+          - Implement 1–2 missing patterns (e.g., Dataflows Gen2 ingestion, alternative sources)<br />
+          - Improve performance/structure in existing pipelines
+        </td>
+        <td>
+          - Extend KQL work: create a small set of reusable operational queries
+        </td>
+        <td>
+          - Optional: refine ML notebook from Week 9
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">11</td>
+        <td>Mini-project 2 (real-time)</td>
+        <td>
+          - Build a small real-time analytics scenario in Fabric Real-Time Intelligence<br />
+          - Ingest simulated events into a KQL database
+        </td>
+        <td>
+          - Author KQL-based dashboards showing key metrics and trends
+        </td>
+        <td>
+          - Reflect on batch vs real-time trade-offs
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">12</td>
+        <td>Polish & documentation</td>
+        <td>
+          - Refactor notebooks and pipelines for both mini-projects<br />
+          - Improve naming, configuration, and folder structures
+        </td>
+        <td>
+          - Ensure KQL queries and Python notebooks are clean and well-commented
+        </td>
+        <td>
+          - Write 2–3 STAR-style interview stories based on your projects
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">13</td>
+        <td>Capstone assembly</td>
+        <td>
+          - Consolidate all work into a single Fabric workspace and GitHub repo<br />
+          - Create a clear architecture diagram and README
+        </td>
+        <td>
+          - Verify that all code runs cleanly end-to-end
+        </td>
+        <td>
+          - Light DP-600/700 preview; note which objectives remain for next semester
+        </td>
+        <td>10–12</td>
+      </tr>
+      <tr>
+        <td class="week">14</td>
+        <td>Retrospective & buffer</td>
+        <td>
+          - Write a short retrospective on what you learned and what to change in Semester 2
+        </td>
+        <td>
+          - Catch up on any incomplete modules or labs
+        </td>
+        <td>
+          - Identify one Kaggle competition or Azure/Fabric hackathon to target next semester
+        </td>
+        <td>10–12</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
